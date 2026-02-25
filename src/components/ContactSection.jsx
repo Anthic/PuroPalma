@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 // Local assets theke images import kora hocche
 import Contact1 from "../assets/c-1.jpg";
 import Contact2 from "../assets/c-2.jpg";
 import Contact3 from "../assets/c-3.jpg";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 const ContactSection = () => {
   const sectionRef = useRef(null);

@@ -4,6 +4,7 @@ import EssenceSection from "../components/EssenceSection";
 import Experience from "../components/Experience";
 import GallerySub from "../components/GallerySub";
 
+
 import LuxuryFacilities from "../components/LuxuryFacilities";
 import PromoVideo from "../components/PromoVideo";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <Experience />
       <LuxuryFacilities />
       <GallerySub/>
+      
       <ContactSection />
       <EssenceSection />
     </div>

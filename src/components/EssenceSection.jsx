@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 // Image Import (Local Assets)
 import EssenceBG from "../assets/scrollBanner.jpg";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,7 +42,7 @@ const EssenceSection = () => {
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{ 
           backgroundImage: `url(${EssenceBG})`,
-          backgroundAttachment: "fixed", 
+          backgroundAttachment: "scroll", 
         }}
       >
         {/* Dark Overlay - Text readability baranor jonno */}

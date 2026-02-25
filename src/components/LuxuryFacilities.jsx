@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 // Images import
 import PoolImg from "../assets/pool.jpg";
@@ -8,6 +7,8 @@ import KitchenImg from "../assets/kitchen.jpg";
 import SleepImg from "../assets/sleep.jpg";
 import gym from "../assets/gym.png";
 import outdoor from "../assets/outdoor.jpg";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 

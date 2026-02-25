@@ -1,7 +1,5 @@
 import React from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 // Images Import
 import g1 from "../assets/g-1.jpg";
@@ -12,6 +10,10 @@ import g5 from "../assets/g-5.jpg";
 import g6 from "../assets/g-6.jpg";
 import g7 from "../assets/g-7.jpg";
 import ProjectCard from "./ProjectCard";
+import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,9 +67,12 @@ const GallerySub = () => {
 
         {/* Bottom View Button */}
         <div className="mt-20 flex justify-start">
-          <button className="px-12 py-4 border bg-[#F2EBDB] font-bold  uppercase tracking-widest text-[12px] hover:bg-white hover:text-black transition-all duration-500 text-[#C5A059]">
+          <Link
+            to={"/gallery"}
+            className="px-12 py-4 border bg-[#F2EBDB] font-bold  uppercase tracking-widest text-[12px] hover:bg-white hover:text-black transition-all duration-500 text-[#C5A059]"
+          >
             View Gallery
-          </button>
+          </Link>
         </div>
       </div>
     </div>

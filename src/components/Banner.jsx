@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import bannerImg from "../assets/banner.jpg";
+import { Link } from "react-router-dom";
 
 export default function Banner() {
   const containerRef = useRef(null);
@@ -38,7 +39,6 @@ export default function Banner() {
       ref={containerRef}
       className="relative h-screen w-full overflow-hidden flex items-center justify-center text-white"
     >
-    
       <div className="absolute inset-0 z-0">
         <img
           src={bannerImg}
@@ -48,16 +48,13 @@ export default function Banner() {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-
-      <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl">
-       
-        <div className="overflow-hidden mb-10 md:mb-14">
+      <div className="relative z-10 container mx-auto px-6 text-center max-w-7xl">
+        <div className=" mb-6 md:mb-10">
           <h1
             ref={titleRef}
             className="text-white font-['Poppins'] font-bold text-[40px] md:text-[64px] leading-[100%] tracking-normal text-center"
           >
-            Your Private Escape in
-            <br className="hidden md:block" /> Malaga
+            Your Private Escape in Malaga
           </h1>
         </div>
 
@@ -65,7 +62,7 @@ export default function Banner() {
         <div className="overflow-hidden">
           <p
             ref={subtitleRef}
-            className="text-white/80 font-['Inter'] font-normal text-[18px] md:text-[24px] leading-[120%] tracking-[-0.04em] text-center max-w-3xl mx-auto line-clamp-3"
+            className="text-white/80 font-poppins font-normal text-[18px] md:text-[24px] leading-[120%] tracking-[-0.04em] text-center max-w-3xl mx-auto line-clamp-3"
           >
             Welcome to PuroPalma, a private luxury villa designed for
             relaxation, comfort, and tranquility.
@@ -73,9 +70,9 @@ export default function Banner() {
         </div>
       </div>
 
- 
       <div className="absolute bottom-8 right-8 md:bottom-12 md:right-16 z-20">
-        <button
+        <Link
+          to={"/contact"}
           ref={btnRef}
           className="flex items-center gap-3 bg-black/80 hover:bg-white hover:text-black transition-all duration-500 border border-white/20 px-8 py-4 md:px-10 md:py-5 uppercase tracking-[0.2em] text-xs md:text-sm group"
         >
@@ -83,7 +80,7 @@ export default function Banner() {
           <span className="group-hover:translate-x-2 transition-transform duration-300 text-xl">
             →
           </span>
-        </button>
+        </Link>
       </div>
     </section>
   );

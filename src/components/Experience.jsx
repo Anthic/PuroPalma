@@ -1,12 +1,13 @@
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 // ইমেজ ইম্পোর্ট (আপনার সঠিক পাথ অনুযায়ী চেক করে নিন)
 import imgOne from "../assets/one.png";
 import imgTwo from "../assets/two.png";
 import imgThree from "../assets/three.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 

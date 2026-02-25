@@ -1,14 +1,15 @@
-import BigGallery from "../components/BigGallery";
+
 import GalleryHeader from "../components/GalleryHeader";
-import GallerySub from "../components/GallerySub";
+
 import NavBar from "../components/NavBar";
+import ScrollGallery from "../components/ScrollGallery";
 
 export default function Gallery() {
   return (
     <div>
       <NavBar />
       <GalleryHeader />
-      <BigGallery />
+      <ScrollGallery/>
     </div>
   );
 }

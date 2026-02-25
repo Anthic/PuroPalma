@@ -1,7 +1,4 @@
 import React from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Images Import
 import g1 from "../assets/g-1.jpg";
@@ -14,6 +11,9 @@ import g7 from "../assets/g-7.jpg";
 import g8 from "../assets/g-8.jpg";
 import g9 from "../assets/g-9.jpg";
 import ProjectCard from "./ProjectCard";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
