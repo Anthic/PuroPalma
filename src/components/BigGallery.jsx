@@ -1,15 +1,15 @@
 import React from "react";
 
 // Images Import
-import g1 from "../assets/g-1.jpg";
-import g2 from "../assets/g-2.jpg";
-import g3 from "../assets/g-3.jpg";
-import g4 from "../assets/g-4.jpg";
-import g5 from "../assets/g-5.jpg";
-import g6 from "../assets/g-6.jpg";
-import g7 from "../assets/g-7.jpg";
-import g8 from "../assets/g-8.jpg";
-import g9 from "../assets/g-9.jpg";
+import g1 from "../assets/g-1.webp";
+import g2 from "../assets/g-2.webp";
+import g3 from "../assets/g-3.webp";
+import g4 from "../assets/g-4.webp";
+import g5 from "../assets/g-5.webp";
+import g6 from "../assets/g-6.webp";
+import g7 from "../assets/g-7.webp";
+import g8 from "../assets/g-8.webp";
+import g9 from "../assets/g-9.webp";
 import ProjectCard from "./ProjectCard";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";

@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Image Import (Local assets theke)
-import ContactBG from "../assets/contactbanner.jpg";
+import ContactBG from "../assets/contactbanner.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 

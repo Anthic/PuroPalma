@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import bannerImg from "../assets/banner.jpg";
+import bannerImg from "../assets/banner.webp";
 import { Link } from "react-router-dom";
 
 export default function Banner() {

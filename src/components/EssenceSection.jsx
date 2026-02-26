@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 
 // Image Import (Local Assets)
-import EssenceBG from "../assets/scrollBanner.jpg";
+import EssenceBG from "../assets/scrollBanner.webp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";

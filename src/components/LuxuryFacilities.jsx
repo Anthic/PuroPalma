@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from "react";
 
 
 // Images import
-import PoolImg from "../assets/pool.jpg";
-import KitchenImg from "../assets/kitchen.jpg";
-import SleepImg from "../assets/sleep.jpg";
-import gym from "../assets/gym.png";
-import outdoor from "../assets/outdoor.jpg";
+import PoolImg from "../assets/pool.webp";
+import KitchenImg from "../assets/kitchen.webp";
+import SleepImg from "../assets/sleep.webp";
+import gym from "../assets/gym.webp";
+import outdoor from "../assets/outdoor.webp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 

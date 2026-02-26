@@ -2,9 +2,9 @@ import { useRef } from "react";
 
 
 // ইমেজ ইম্পোর্ট (আপনার সঠিক পাথ অনুযায়ী চেক করে নিন)
-import imgOne from "../assets/one.png";
-import imgTwo from "../assets/two.png";
-import imgThree from "../assets/three.png";
+import imgOne from "../assets/one.webp";
+import imgTwo from "../assets/two.webp";
+import imgThree from "../assets/three.webp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
