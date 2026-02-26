@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Banner />
-      <div className="pt-28 bg-black">
+      <div className="pt-32 bg-black">
         <PromoVideo />
       </div>
       <Experience />
