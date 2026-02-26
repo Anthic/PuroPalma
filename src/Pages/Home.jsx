@@ -4,7 +4,6 @@ import EssenceSection from "../components/EssenceSection";
 import Experience from "../components/Experience";
 import GallerySub from "../components/GallerySub";
 
-
 import LuxuryFacilities from "../components/LuxuryFacilities";
 import PromoVideo from "../components/PromoVideo";
 
@@ -12,11 +11,13 @@ export default function Home() {
   return (
     <div>
       <Banner />
-      <PromoVideo />
+      <div className="pt-28 bg-black">
+        <PromoVideo />
+      </div>
       <Experience />
       <LuxuryFacilities />
-      <GallerySub/>
-      
+      <GallerySub />
+
       <ContactSection />
       <EssenceSection />
     </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { FaLinkedinIn, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
@@ -14,28 +15,25 @@ const Footer = () => {
             </h4>
             <ul className="flex flex-col gap-3">
               <li>
-                <a
-                  href="#home"
+                <Link to={"/"}
                   className="text-xl text-[#F2EBDB] lg:text-2xl hover:text-gray-400 transition-colors"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#gallery"
+                <Link to={"/gallery"}
                   className="text-xl text-[#F2EBDB] lg:text-2xl hover:text-gray-400 transition-colors"
                 >
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contact"
+                <Link to={"/contact"}
                   className="text-xl text-[#F2EBDB] lg:text-2xl hover:text-gray-400 transition-colors"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

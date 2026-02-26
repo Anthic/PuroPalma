@@ -3,59 +3,65 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
 
+import promoVideo from "../assets/video/mickey9393.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PromoVideo = () => {
-  const videoContainerRef = useRef(null);
+  const sectionRef = useRef(null);
   const videoRef = useRef(null);
 
   useGSAP(
     () => {
+      
       gsap.fromTo(
         videoRef.current,
         {
-          y: 60,
           opacity: 0,
+          scale: 1.1,
         },
         {
-          y: 0,
           opacity: 1,
+          scale: 1,
           duration: 1.5,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: videoContainerRef.current,
-            start: "top 85%",
+            trigger: sectionRef.current,
+            start: "top 80%",
           },
         },
       );
+
+      // autoplay when enters viewport
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top 80%",
+        onEnter: () => {
+          videoRef.current.play();
+        },
+      });
     },
-    { scope: videoContainerRef },
+    { scope: sectionRef },
   );
 
   return (
     <section
-      ref={videoContainerRef}
-      className="w-full py-12 md:py-16 bg-[#0a0a0a]"
+      ref={sectionRef}
+      className="relative w-full h-screen overflow-hidden pt-12"
     >
-      {/* Container: Width কমানো হয়েছে (w-10/12) এবং উচ্চতা কন্ট্রোল করা হয়েছে */}
-      <div
+      {/* Background Video */}
+      <video
         ref={videoRef}
-        className="relative w-11/12 md:w-10/12 mx-auto h-75 md:h-125 overflow-hidden shadow-2xl border border-white/5"
-      >
-        {/* এখানে h-[300px] (Mobile) এবং h-[500px] (Desktop) ব্যবহার করা হয়েছে 
-            যাতে ভিডিওটি খুব বেশি লম্বা না দেখায়।
-        */}
-        <iframe
-          className="absolute top-1/2 left-1/2 w-full h-[120%] -translate-x-1/2 -translate-y-1/2 object-cover"
-          src="https://www.youtube.com/embed/bCR8BXEfdF0?si=Wd7g5WBDdQjZqIRB&rel=0&modestbranding=1&autoplay=0&controls=1"
-          title="PuroPalma Promotional Video"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      </div>
+        className="absolute inset-0 w-full h-full object-cover"
+        src={promoVideo}
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
+
+      {/* Optional dark overlay */}
+      <div className="absolute inset-0 bg-black/30"></div>
     </section>
   );
 };

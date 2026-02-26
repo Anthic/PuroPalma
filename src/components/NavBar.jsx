@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import { BiMenu, BiX } from "react-icons/bi";
 import logo from "../assets/logo.png";
@@ -84,18 +84,16 @@ export default function NavBar() {
   );
   return (
     <header className="relative w-full ">
-     
       <nav className="absolute top-0 left-0 right-0 w-11/12 mx-auto z-40 flex items-center justify-between px-6 py-4 md:px-10 bg-transparent">
         {/* Left Side: Logo */}
-        <div className="flex items-center shrink-0">
+        <Link to={"/"} className="flex items-center shrink-0">
           <img
             src={logo}
             alt="PuroPalma"
             className="h-10 md:h-12 w-auto object-contain"
           />
-        </div>
+        </Link>
 
-      
         <button
           onClick={() => setIsOpen(true)}
           className="flex items-center gap-3 text-white group outline-none transition-all border border-gray-400 p-2"
@@ -109,7 +107,6 @@ export default function NavBar() {
         </button>
       </nav>
 
-      
       <div
         ref={overlayRef}
         className="fixed inset-0 z-50 bg-[#001524]/95 backdrop-blur-xl flex flex-col items-center justify-center "
